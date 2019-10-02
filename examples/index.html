@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filezone Example</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles/demo.css">
+</head>
+<body>
+<div class="container mt-5">
+	<form method="POST" enctype="multipart/form-data">
+		<!-- form user info -->
+        <div class="card card-outline-secondary mb-5">
+        	<div class="card-header">
+        		<h3 class="mb-0">Filezone example</h3>
+        	</div>
+        	<div class="card-body">
+        		<h3>student Info.</h3>
+        		<div class="row">
+        			<div class="col-md-8 col-12 card-border-right">
+        				<div class="form-group row">
+	        			<label class="col-lg-3 col-form-label form-control-label">Student #No#</label>
+	        			<div class="col-lg-9">
+	        				<input class="form-control" type="text" placeholder="Student NO">
+	        				<small class="form-text text-muted">Student No: contains characters, numbers, ....</small>
+	        			</div>
+		        		</div>
+		        		<div class="form-group row">
+		        			<label class="col-lg-3 col-form-label form-control-label">Student Name</label>
+		        			<div class="col-lg-9">
+		        				<input class="form-control" type="text" placeholder="Jone doe">
+		        				<small class="form-text text-muted">Student Full Name.</small>
+		        			</div>
+		        		</div>
+		        		<div class="form-group row">
+		        			<label class="col-lg-3 col-form-label form-control-label">Birth date</label>
+		        			<div class="col-lg-9">
+		        				<input class="form-control" type="date">
+		        				<small class="form-text text-muted">Click to choose birthdate.</small>
+		        			</div>
+		        		</div>
+
+		        		<hr>
+		        		<h5>Documents:</h5>
+		        		<div class="row">
+		        			<div class="col-md-4 col-12">
+		        				<div class="filezone" filezone-placeholder="Birthdate Document" filezone-input-name="birthdate_document"></div>
+		        			</div>
+		        			<div class="col-md-4 col-12">
+		        				<div class="filezone" filezone-placeholder="Basic School Certificate" filezone-input-name="basic_certificate"></div>
+		        			</div>
+		        			<div class="col-md-4 col-12">
+		        				<div class="other-files" filezone-placeholder="Other File" filezone-input-name="other_file"></div>
+		        			</div>
+		        		</div>
+        			</div>
+        			<div class="col-md-4 col-12">
+        				<div class="red-filezone" filezone-placeholder="Click to choose student Image" filezone-input-name="student_image"></div>
+        				<small class="form-text text-muted">Student Image.</small>
+        			</div>
+        		</div>
+        		<hr>
+        		<h3>Student Account</h3>
+        		<div class="row">
+        			<div class="col-md-8 col-12 card-border-right">
+        				<div class="form-group row">
+		        			<label class="col-lg-3 col-form-label form-control-label">Username</label>
+		        			<div class="col-lg-9">
+		        				<input class="form-control" type="text" placeholder="Enter Username">
+		        			</div>
+			        	</div>
+		        		<div class="form-group row">
+		        			<label class="col-lg-3 col-form-label form-control-label">Email</label>
+		        			<div class="col-lg-9">
+		        				<input class="form-control" type="url" placeholder="Enter Email -eg. abc@xyz.domain">
+		        			</div>
+		        		</div>
+			        	<div class="form-group row">
+			        		<label class="col-lg-3 col-form-label form-control-label">Password</label>
+			        		<div class="col-lg-9">
+			        			<input class="form-control" type="password" placeholder="Enter Password"> 
+			        			<small class="form-text text-muted">Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</small>
+			        		</div>
+			        	</div>
+			        	
+			        	<div class="form-group row">
+			        		<label class="col-lg-3 col-form-label form-control-label">Confirm Password</label>
+			        		<div class="col-lg-9">
+			        			<input class="form-control" type="password" placeholder="Re-Enter password">
+			        		</div>
+			        	</div>
+			        </div>
+	    			<div class="col-md-4 col-12">
+	    				<div class="filezone" filezone-placeholder="Click To choose Profile Image" filezone-input-name="account_image"></div>
+	    				<small class="form-text text-muted">Student account profile image</small>
+	    			</div>
+        		</div>
+    		</div>
+    		<div class="card-footer">
+        		<div class="btn-group" style="float: right;">
+        			<button type="submit" class="btn btn-primary">Save</button>
+        			<button type="reset" class="btn btn-warning">Reset</button>
+        			<button type="button" class="btn btn-danger">Cancel</button>
+        		</div>
+        	</div>
+    	</div>
+	</form>
+</div>
+
+
+<script type="text/javascript" src="../dist/filezone.js"></script>
+<script type="text/javascript">
+	filezone = new Filezone();
+
+	filezonered = new Filezone({
+		class: 'red-filezone',
+		style: {
+			border: true,
+			borderColor: 'red',
+			borderStyle: 'dashed'
+		}
+	});
+	/*
+		Available Filezone Options:
+		1. class: file zone box class name.
+		2. placeholder:  text to be display on the box.
+		3. style: {
+			3.1: border: true|false
+			3.2: borderColor: color.
+			3.3: boderStyle: none|groove|dotted|dashed|solid|inset|outset.
+			3.4: textColor: color.
+			3.5: backgroundColor: color.
+		}
+	*/
+	otherfiles = new Filezone({
+		class: 'other-files',
+		style: {
+			borderColor: 'green',
+			borderStyle: 'dotted',
+			textColor: '#3F51B5',
+			backgroundColor: 'skyblue',
+		}
+	});
+</script>
+
+</body>
+</html>

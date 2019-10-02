@@ -1,0 +1,9 @@
+body {
+	margin: 0;
+	background-color: #2E7D32;
+}
+
+.card-border-right {
+	border-right: green solid 3px;
+}
+
