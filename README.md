@@ -103,13 +103,13 @@ Instead of giving default filezone class to the element you can use options for 
 	```
 
 3. **style** to change default Filezone box style use **style** option. For now 5 styles are available:
-- **border** : true|false. disable or enable box border **true** is default.
-- **borderColor** : chnage Filezone box border color.
-- **textColor** : change text color.
-- **backgroundColor** : give a Filezone box a background color you want. **gray** is default.
-- **boderStyle** : change Filezone box border style **all css border styles are valid** (none|groove|dotted|dashed|solid|inset|outset|double|ridge|hidden). **groove** is default.
+	- **border** : true|false. disable or enable box border **true** is default.
+	- **borderColor** : chnage Filezone box border color.
+	- **textColor** : change text color.
+	- **backgroundColor** : give a Filezone box a background color you want. **gray** is default.
+	- **boderStyle** : change Filezone box border style **all css border styles are valid** (none|groove|dotted|dashed|solid|inset|outset|double|ridge|hidden). **groove** is default.
 
-	**Example** 
+	**Example**: 
 	```javascript
 	var fileHandler = new Filezone({
 		class: "files-images",
